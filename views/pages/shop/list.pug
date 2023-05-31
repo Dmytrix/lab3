@@ -1,0 +1,28 @@
+extends ../../layout
+
+block content
+  h3 Shop List
+
+  a(href='/shop/add' class="btn btn-default") Add
+
+  table(class="table")
+    thead
+      tr
+        th Id
+        th Name
+        th Address
+        th Capacity
+        th Delete
+        th Update
+
+    tbody
+      each shop in shops
+        tr
+          td #{shop.id}
+          td #{shop.name}
+          td #{shop.address}
+          td #{shop.capacity}
+          td 
+            a(class="btn_delete btn-warning" href=`/shop/remove/${shop.id}`) delete
+          td 
+            a(class="btn_update btn-primary" href=`/shop/edit/${shop.id}`) update

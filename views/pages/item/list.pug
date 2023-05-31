@@ -1,0 +1,26 @@
+extends ../../layout
+
+block content
+  h3 Item List
+
+  a(href='/item/add' class="btn btn-default") Add
+
+  table(class="table")
+    thead
+      tr
+        th Id
+        th Name
+        th Contry
+        th Delete
+        th Update
+
+    tbody
+      each item in items
+        tr
+          td #{item.id}
+          td #{item.name}
+          td #{item.contry}
+          td 
+            a(class="btn_delete btn-warning" href=`/item/remove/${item.id}`) delete
+          td 
+            a(class="btn_update btn-primary" href=`/item/edit/${item.id}`) update

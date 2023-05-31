@@ -1,0 +1,23 @@
+extends ../../layout
+
+block content
+  div(class='col-md-6')
+    form(id='product-add-form' name='product-add-form' class='form-horizontal' method="POST" action='')
+      div(class='form-group')
+        div(class='col-md-3')
+          label(for='name') Name
+        div(class='col-md-9')
+          input(id='name' name='name' class='form-control')
+      div(class='form-group')
+        div(class='col-md-3')
+          label(for='sku') Address
+        div(class='col-md-9')
+          input(id='address' name='address' class='form-control')
+      div(class='form-group')
+        div(class='col-md-3')
+          label(for='price') Capacity
+        div(class='col-md-9')
+          input(id='capacity' name='capacity' class='form-control')
+      div(class='form-group')
+        div(class='col-md-12')
+          button(type='submit' class='btn btn-primary') Create

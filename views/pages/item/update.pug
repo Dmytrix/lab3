@@ -1,0 +1,19 @@
+extends ../../layout
+
+block content
+  div(class='col-md-6')
+    form(id='shop-update-form' name='shop-update-form' class='form-horizontal' method="POST" action='')
+      input(id='id' name='id' type='hidden')
+      div(class='form-group')
+        div(class='col-md-3')
+          label(for='name') Name
+        div(class='col-md-9')
+          input(id='name' name='name' class='form-control' value=`${item.name}`)
+      div(class='form-group')
+        div(class='col-md-3')
+          label(for='contry') Contry
+        div(class='col-md-9')
+          input(id='contry' name='contry' class='form-control' value=`${item.contry}`)
+      div(class='form-group')
+        div(class='col-md-12')
+          button(type='submit' class='btn btn-primary') Update

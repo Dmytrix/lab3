@@ -1,0 +1,18 @@
+extends ../../layout
+
+block content
+  div(class='col-md-6')
+    form(id='item-add-form' name='item-add-form' class='form-horizontal' method="POST" action='')
+      div(class='form-group')
+        div(class='col-md-3')
+          label(for='name') Name
+        div(class='col-md-9')
+          input(id='name' name='name' class='form-control')
+      div(class='form-group')
+        div(class='col-md-3')
+          label(for='contry') Contry
+        div(class='col-md-9')
+          input(id='contry' name='contry' class='form-control')
+      div(class='form-group')
+        div(class='col-md-12')
+          button(type='submit' class='btn btn-primary') Create
